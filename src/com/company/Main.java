@@ -32,18 +32,17 @@ public class Main {
     }
 
     public static void printMap(Map<String, Product> store) {
-     //   System.out.println("Текущий список товаров:");
         store.forEach((key, value) -> System.out.printf("Артикул: %s Товар: %s \n", key, value.getName()));
     }
 
-    public static void sortMapByValue(List<Map.Entry<String, Product>> list) {
-        list.sort(Comparator.comparing(o -> o.getValue().getName()));
-    }
-
-    public static void printSortedMap(List<Map.Entry<String, Product>> list) {
-        System.out.println("\nОстаток товаров за прошедший месяц:");
-        list.forEach(s -> System.out.println(" Товар: " + s.getValue().getName() + " -> "));
-    }
+//    public static void sortMapByValue(List<Map.Entry<String, Product>> list) {
+//        list.sort(Comparator.comparing(o -> o.getValue().getName()));
+//    }
+//
+//    public static void printSortedMap(List<Map.Entry<String, Product>> list) {
+//        System.out.println("\nОстаток товаров за прошедший месяц:");
+//        list.forEach(s -> System.out.println(" Товар: " + s.getValue().getName() + " -> "));
+//    }
 
 //    public static void printMap1(Map<String, Product> store) {
 //        System.out.println("Текущий список товаров:");
