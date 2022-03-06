@@ -15,20 +15,24 @@ public class Main {
         store.put("M25676890", new Product("Meat"));
         store.put("CH3457659", new Product("Chocolate"));
 
+        System.out.println("Текущий список товаров:");
         printMap(store);
 
-        store.remove("M20215890N6");
+        store.remove("CH3457659");
 
-        Set<Map.Entry<String, Product>> entrySet = store.entrySet();
-        List<Map.Entry<String, Product>> list = new ArrayList<>(entrySet);
+        Map<String, Product> sortedStore = new TreeMap<>(store);
+        System.out.println("Отсортированный список товаров:");
+        printMap(sortedStore);
+//        Set<Map.Entry<String, Product>> entrySet = store.entrySet();
+//        List<Map.Entry<String, Product>> list = new ArrayList<>(entrySet);
 
-        sortMapByValue(list);
-
-        printSortedMap(list);
+//        sortMapByValue(list);
+//
+//        printSortedMap(list);
     }
 
     public static void printMap(Map<String, Product> store) {
-        System.out.println("Текущий список товаров:");
+     //   System.out.println("Текущий список товаров:");
         store.forEach((key, value) -> System.out.printf("Артикул: %s Товар: %s \n", key, value.getName()));
     }
 
@@ -38,8 +42,15 @@ public class Main {
 
     public static void printSortedMap(List<Map.Entry<String, Product>> list) {
         System.out.println("\nОстаток товаров за прошедший месяц:");
-        list.forEach(s-> System.out.println(" Товар: " + s.getValue().getName() + " -> "));
+        list.forEach(s -> System.out.println(" Товар: " + s.getValue().getName() + " -> "));
     }
 
-
+//    public static void printMap1(Map<String, Product> store) {
+//        System.out.println("Текущий список товаров:");
+//        Set<Map.Entry<String, Product>> keyvalues = store.entrySet();
+//        for (Map.Entry<String, Product> keyvalue : keyvalues) {
+//            System.out.println(keyvalue.getKey() + " " + keyvalue.getValue().getName());
+//        }
+//
+//    }
 }

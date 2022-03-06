@@ -1,6 +1,6 @@
 package com.company;
 
-public class Product implements Comparable <Product> {
+public class Product {
    private final String name;
 
     public Product(String value) {
@@ -13,10 +13,7 @@ public class Product implements Comparable <Product> {
 
 
 
-    @Override
-    public int compareTo(Product o) {
-        return 0;
-    }
+
     @Override
     public String toString() {
         return "Product{" +
